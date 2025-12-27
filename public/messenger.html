@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body style="background:black;color:#00ff88;font-family:monospace;">
+<h2>LIVE INTELLIGENCE MESSENGER</h2>
+<div id="chat"></div>
+<input id="msg">
+<button onclick="send()">SEND</button>
+
+<script src="/socket.io/socket.io.js"></script>
+<script>
+const socket = io();
+
+socket.on("message", msg => {
+  chat.innerHTML += `<p>${msg}</p>`;
+});
+
+function send() {
+  socket.emit("message", msg.value);
+  msg.value="";
+}
+</script>
+</body>
+</html>

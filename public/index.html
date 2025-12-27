@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SECURE LOGIN</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="terminal">
+  <h2>SECURE OPERATIONS TERMINAL</h2>
+
+  <input id="codename" placeholder="AGENT CODENAME">
+  <input id="service" placeholder="SERVICE NUMBER">
+  <input id="phrase" placeholder="CLEARANCE PHRASE">
+  <select id="role">
+    <option>AGENT</option>
+    <option>HANDLER</option>
+  </select>
+
+  <button onclick="login()">INITIATE AUTHORIZATION</button>
+  <p id="status"></p>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

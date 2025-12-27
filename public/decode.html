@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body style="background:black;color:#00ff88;font-family:monospace;">
+<pre id="out"></pre>
+<script>
+const lines = [
+  "Establishing secure uplink...",
+  "Verifying credentials...",
+  "Decrypting channel...",
+  "Clearance accepted...",
+  "ACCESS GRANTED"
+];
+
+let i = 0;
+function run() {
+  if (i < lines.length) {
+    out.textContent += lines[i] + "\n";
+    i++;
+    setTimeout(run, 600);
+  } else {
+    setTimeout(() => location.href = "messenger.html", 800);
+  }
+}
+run();
+</script>
+</body>
+</html>
